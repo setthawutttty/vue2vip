@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+:root{
+    --orange:#ff9646;
+    --white:#FFF7E9;
+    --bule:#31c5ff;
+    --buleb:#1746A2;
+}
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../assets/login_pages/bg.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    color: #fff;
+    
+  }
+
+/*ส่วนบนของเว็ป*/
+#topnav{
+    padding: 20px 0;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgba(255, 255, 255, 0.774) 1px 4px 20px;
+}
+.logo_page img{
+    max-width: 100%;
+   }
+/*menu model*/
+#topmenu{
+    display: block;
+    margin-top: 10px;
+    padding: 20px;
+    
+}
+
+/*btn model*/
+#topmenu .btn_md{
+    background-color: #00aeef;
+    color: #fff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+
+/*ติดต่อ line*/
+#topmenu .btn_mdl{
+    background-color: #00b900;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+}
+#topmenu .btn_mdl:hover {
+    background-color: #fff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #00b900;
+}
+/*ติดต่อ line*/
+
+.group {
+    display: block;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 10px;
+   }
+
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    padding-left: 1rem;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: rgba(234,76,137,0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+   
+/*button style*/
+button {
+    margin: 10px;
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .btn-login .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       rgb(0, 120, 141) 0%,
+       rgb(68, 144, 196) 8%,
+       rgb(68, 144, 196) 92%,
+       rgb(0, 120, 141) 100%
+     );
+   }
+   
+   .btn-login .front {
+    display: block;
+    position: relative;
+    padding: 5px 20px;
+    border-radius: 12px;
+    color: white;
+    background: var(--bule);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   .btn-register .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       rgb(167, 85, 22) 0%,
+       rgb(211, 107, 28) 8%,
+       rgb(211, 107, 28) 92%,
+       rgb(167, 85, 22) 100%
+     );
+   }
+   
+   .btn-register .front {
+    display: block;
+    position: relative;
+    padding: 5px 20px;
+    border-radius: 12px;
+    color: white;
+    background: var(--orange);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   button:hover {
+    filter: brightness(110%);
+   }
+   
+   button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   button:focus:not(:focus-visible) {
+    outline: none;
+   }
+   .card_content{
+    
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 10px;
+ 
+   }
+   .card_b{
+   
+    padding: 10px;
+   }
+   .card_h{
+    background-color: #8a8a8aa8;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+   }
+   .card_h span{
+    background-color: var(--bule);
+    padding: 0 10px;
+    border-radius: 10px;
+    color: #fff;
+   }
+   .card_bh{
+    background-color: var(--orange);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    padding: 5px 0;
+    font-weight: bold;
+   }
+   .card_bb{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 60%;
+   }
+.regis_form{
+    background-color:#8a8a8aa8 ;
+    margin: 20px 0 20px 0 !important;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+  /*end button style*/
+/* h2{
+    display: none;
+}
+@media only screen and (max-width:500px){
+    body{
+        background-color: var(--bule);
+    }
+    #smartphone h2{
+        display: block;
+    }
+}
+@media (min-width:501px) and (max-width:768px){
+    body{
+        background-color: var(--buleb);
+    }
+    #tablets h2{
+        display: block;
+    }
+}
+@media (min-width:769px) and (max-width:1200px){
+    body{
+        background-color: var(--orange);
+    }
+    #normal h2{
+        display: block;
+    }
+    #headtitle h1{
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+    }
+}
+@media (min-width:1201px){
+    body{
+        background-color: black;
+    }
+    #widescreen h2{
+        display: block;
+        color: #fff;
+    }
+
+}
+@media (max-height:500px){
+    body{
+        background-color: pink;
+    }
+    #landscape h2{
+        display: block;
+    }
+
+} */
